@@ -1,0 +1,73 @@
+# SlickQuant
+
+**Open-source building blocks for algorithmic trading.**
+
+We build software for market data, exchange simulation, and order execution,
+along with the messaging, networking, and observability tools underneath.
+Modern C++ is at the core, with Python interoperability and components for web
+and desktop trading interfaces.
+
+Use the libraries independently or combine them into a trading system.
+
+[Website](https://www.slickquant.com) · [Trading systems](#trading-systems) · [Exchange SDKs](#exchange-sdks) · [Infrastructure](#infrastructure) · [Python](#python-interoperability) · [Get involved](#get-involved)
+
+## Trading systems
+
+| Project | What it does |
+| --- | --- |
+| [slick-trader](https://github.com/SlickQuant/slick-trader) | Multi-broker trading engine with strategy plugins, position tracking, pre-trade risk checks, and a live dashboard. |
+| [slick-sim](https://github.com/SlickQuant/slick-sim) | Exchange simulator with a FIFO matching engine, optional live market data, and venue-compatible APIs for testing trading clients. |
+| [slick-orderbook](https://github.com/SlickQuant/slick-orderbook) | C++ order books for aggregated price levels and individual orders across multiple instruments. |
+| [slick-stacker](https://github.com/SlickQuant/slick-stacker) | Maintains a ladder of orders around a target quote as acknowledgements, fills, cancels, and rejects arrive. |
+| [slick-ladder](https://github.com/SlickQuant/slick-ladder) | Price ladder UI for web, WASM, and desktop, with aggregated and Market-By-Order views. |
+
+## Exchange SDKs
+
+C++ clients for trading, market data, and account access.
+
+| Project | Integration |
+| --- | --- |
+| [alpaca-cpp](https://github.com/SlickQuant/alpaca-cpp) | Alpaca Trading and Market Data APIs, with streaming support. |
+| [coinbase-advanced-cpp](https://github.com/SlickQuant/coinbase-advanced-cpp) | Coinbase Advanced Trade REST and WebSocket APIs. |
+| [hyperliquid-cpp](https://github.com/SlickQuant/hyperliquid-cpp) | Hyperliquid REST and WebSocket APIs, with native EIP-712 signing. |
+
+## Infrastructure
+
+Reusable libraries for applications where throughput, latency, and memory
+behavior matter, including applications outside trading.
+
+| Project | What it does |
+| --- | --- |
+| [slick-queue](https://github.com/SlickQuant/slick-queue) | Lock-free multi-producer, multi-consumer queues with optional shared memory. |
+| [slick-stream-buffer](https://github.com/SlickQuant/slick-stream-buffer) | Lock-free byte streams that publish message records from one producer to multiple consumers. |
+| [slick-stream-buffer-multiplexer](https://github.com/SlickQuant/slick-stream-buffer-multiplexer) | Combines multiple producer streams into one ordered stream for multiple consumers. |
+| [slick-shm](https://github.com/SlickQuant/slick-shm) | Cross-platform shared memory for C++. |
+| [slick-dynamic-buffer](https://github.com/SlickQuant/slick-dynamic-buffer) | Boost.Asio DynamicBuffer adapters for Slick buffer backends. |
+| [slick-net](https://github.com/SlickQuant/slick-net) | HTTP, HTTPS, and WebSocket clients built on Boost.Beast. |
+| [slick-socket](https://github.com/SlickQuant/slick-socket) | TCP and UDP multicast networking. |
+| [slick-object-pool](https://github.com/SlickQuant/slick-object-pool) | Lock-free object pooling for predictable allocation behavior. |
+| [slick-logger](https://github.com/SlickQuant/slick-logger) | Asynchronous logging with deferred formatting, multiple sinks, and shared-memory support. |
+| [slick-perfmon](https://github.com/SlickQuant/slick-perfmon) | Latency instrumentation with statistics and collection in a background thread or separate process. |
+
+## Python interoperability
+
+Share queues and byte streams between Python and C++ processes through shared
+memory:
+
+- [slick-queue-py](https://github.com/SlickQuant/slick-queue-py) — multi-producer, multi-consumer queues.
+- [slick-stream-buffer-py](https://github.com/SlickQuant/slick-stream-buffer-py) — single-producer, multi-consumer byte streams.
+- [slick-stream-buffer-multiplexer-py](https://github.com/SlickQuant/slick-stream-buffer-multiplexer-py) — multiple producer streams with a shared ordering point.
+
+See each project's README for compatible versions, memory layouts, and platform
+requirements.
+
+## Get involved
+
+Start with a project's README for installation, examples, and current status.
+Bug reports, documentation improvements, focused pull requests, and reproducible
+benchmarks are welcome in the relevant repository. For performance reports,
+include the workload, hardware, compiler, and build settings.
+
+Each repository documents its own license and dependencies.
+
+[Explore all repositories](https://github.com/orgs/SlickQuant/repositories) · [Sponsor SlickQuant](https://github.com/sponsors/SlickQuant)
