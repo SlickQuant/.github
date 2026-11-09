@@ -8,18 +8,45 @@ Modern C++ is at the core, with Python interoperability and components for web
 and desktop trading interfaces.
 
 Use the libraries independently or combine them into a trading system.
+Premium subscriptions add CME and ICE trading, simulation, and live market data
+through private GitHub extensions for slick-trader and slick-sim.
 
-[Website](https://www.slickquant.com) · [Trading systems](#trading-systems) · [Exchange SDKs](#exchange-sdks) · [Infrastructure](#infrastructure) · [Python](#python-interoperability) · [Get involved](#get-involved)
+[Website](https://www.slickquant.com) · [Trading systems](#trading-systems) · [Premium venues](#premium-venues) · [Exchange SDKs](#exchange-sdks) · [Infrastructure](#infrastructure) · [Python](#python-interoperability) · [Get involved](#get-involved)
 
 ## Trading systems
 
 | Project | What it does |
 | --- | --- |
-| [slick-trader](https://github.com/SlickQuant/slick-trader) | Multi-broker trading engine with strategy plugins, position tracking, pre-trade risk checks, and a live dashboard. |
-| [slick-sim](https://github.com/SlickQuant/slick-sim) | Exchange simulator with a FIFO matching engine, optional live market data, and venue-compatible APIs for testing trading clients. |
+| [slick-trader](https://github.com/SlickQuant/slick-trader) | Multi-broker trading engine with strategy plugins, position tracking, pre-trade risk checks, and a live dashboard. Premium adds CME and ICE order entry and live market data. |
+| [slick-sim](https://github.com/SlickQuant/slick-sim) | Exchange simulator with a FIFO matching engine, optional live market data, and venue-compatible APIs for testing trading clients. Premium adds live CME MDP 3.0 and ICE iMpact feeds, plus venue-native protocol simulation. |
 | [slick-orderbook](https://github.com/SlickQuant/slick-orderbook) | C++ order books for aggregated price levels and individual orders across multiple instruments. |
 | [slick-stacker](https://github.com/SlickQuant/slick-stacker) | Maintains a ladder of orders around a target quote as acknowledgements, fills, cancels, and rejects arrive. |
 | [slick-ladder](https://github.com/SlickQuant/slick-ladder) | Price ladder UI for web, WASM, and desktop, with aggregated and Market-By-Order views. |
+
+## Premium venues
+
+The core projects remain open source. Premium subscriptions cover both
+slick-trader and slick-sim through private GitHub extensions. Subscribe to CME,
+ICE, or the CME + ICE bundle, with monthly or annual billing.
+
+| Venue | Trading with slick-trader | Simulation with slick-sim |
+| --- | --- | --- |
+| CME | iLink 3 order entry, amendment and cancellation; MDP 3.0 price levels, order-by-order updates and trades; instrument discovery and trading status; feed and session recovery; persisted working orders and fill journaling. | Uses a live CME MDP 3.0 market data feed to build an order-by-order book for simulated execution; simulated iLink 3 sessions per market segment; MDP 3.0 multicast publishing with incremental A/B feeds, MBO/MBP snapshots and instrument definitions. |
+| ICE | Binary Order Entry (BOE); Binary Utility Service (BUS) gateway and instrument discovery; iMpact full-order-depth data, price levels, trades and status; snapshot and session recovery; persisted working orders and fill journaling. | Uses a live ICE iMpact market data feed to build a full-order-depth book for simulated execution; simulated BUS discovery, Binary Order Gateway sessions and BOE order entry for outright futures; iMpact multicast publishing and snapshots. |
+
+The CME subscription includes `slick-trader-cme` and `slick-sim-cme`; the ICE
+subscription includes `slick-trader-ice` and `slick-sim-ice`.
+
+Live feeds require your own venue market data access. All execution in slick-sim
+is simulated. It does not place orders on CME or ICE or model your trades'
+impact on the live market.
+
+[See Premium features and pricing](https://slickquant.com/#premium).
+
+To [request Premium access](https://slickquant.kit.com/7674493e92), fill out our
+Kit form with your venue, billing preference, email address, and GitHub username.
+We'll follow up to arrange payment and access to the private repositories.
+Premium subscriptions are separate from open-source sponsorship.
 
 ## Exchange SDKs
 
