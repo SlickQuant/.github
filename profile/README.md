@@ -9,7 +9,8 @@ and desktop trading interfaces.
 
 Use the libraries independently or combine them into a trading system.
 Premium subscriptions add CME and ICE trading, simulation, and live market data
-through private GitHub extensions for slick-trader and slick-sim.
+through licensed compiled libraries for slick-trader and slick-sim, with ongoing
+updates and integration support.
 
 [Website](https://www.slickquant.com) · [Trading systems](#trading-systems) · [Premium venues](#premium-venues) · [Exchange SDKs](#exchange-sdks) · [Infrastructure](#infrastructure) · [Python](#python-interoperability) · [Get involved](#get-involved)
 
@@ -26,7 +27,7 @@ through private GitHub extensions for slick-trader and slick-sim.
 ## Premium venues
 
 The core projects remain open source. Premium subscriptions cover both
-slick-trader and slick-sim through private GitHub extensions. Subscribe to CME,
+slick-trader and slick-sim through licensed compiled libraries. Subscribe to CME,
 ICE, or the CME + ICE bundle, with monthly or annual billing.
 
 | Venue | Trading with slick-trader | Simulation with slick-sim |
@@ -34,8 +35,15 @@ ICE, or the CME + ICE bundle, with monthly or annual billing.
 | CME | iLink 3 order entry, amendment and cancellation; MDP 3.0 price levels, order-by-order updates and trades; instrument discovery and trading status; feed and session recovery; persisted working orders and fill journaling. | Uses a live CME MDP 3.0 market data feed to build an order-by-order book for simulated execution; simulated iLink 3 sessions per market segment; MDP 3.0 multicast publishing with incremental A/B feeds, MBO/MBP snapshots and instrument definitions. |
 | ICE | Binary Order Entry (BOE); Binary Utility Service (BUS) gateway and instrument discovery; iMpact full-order-depth data, price levels, trades and status; snapshot and session recovery; persisted working orders and fill journaling. | Uses a live ICE iMpact market data feed to build a full-order-depth book for simulated execution; simulated BUS discovery, Binary Order Gateway sessions and BOE order entry for outright futures; iMpact multicast publishing and snapshots. |
 
-The CME subscription includes `slick-trader-cme` and `slick-sim-cme`; the ICE
-subscription includes `slick-trader-ice` and `slick-sim-ice`.
+The CME subscription includes compiled libraries for `slick-trader-cme` and
+`slick-sim-cme`; the ICE subscription includes `slick-trader-ice` and
+`slick-sim-ice`. Delivery includes public headers and integration examples;
+implementation source code is not included.
+
+A valid runtime license is required to use the Premium integrations. Your
+subscription includes license renewals, updates and integration support for
+your selected venues. Cancel anytime: your license remains valid through the
+end of your paid period, and continued use requires renewal.
 
 Live feeds require your own venue market data access. All execution in slick-sim
 is simulated. It does not place orders on CME or ICE or model your trades'
@@ -43,9 +51,10 @@ impact on the live market.
 
 [See Premium features and pricing](https://slickquant.com/#premium).
 
-To [request Premium access](https://slickquant.kit.com/7674493e92), fill out our
-Kit form with your venue, billing preference, email address, and GitHub username.
-We'll follow up to arrange payment and access to the private repositories.
+To [request a Premium license](https://slickquant.com/#premium), open the request
+form on our website and choose your venue and billing preference, then enter
+your email address. We'll follow up to arrange payment, compiled library
+delivery and your runtime license.
 Premium subscriptions are separate from open-source sponsorship.
 
 ## Exchange SDKs
